@@ -1,0 +1,22 @@
+def contar_maiusculas_minusculas(texto):
+#criando função e definir parâmetro
+    contar_maiusculas = 0
+    contar_minusculas = 0
+#nessa parte criamos duas variáveis para contar minúsculas e maiúsculas.
+    for caractere in texto:
+#for vai analisar cada letra da frase
+        if caractere.isalpha():
+#.isalpha() verifica se e letra e ignora numero e símbolos.
+           if caractere.isupper():
+              contar_maiusculas += 1
+#.isupper() conta caracteres maiúsculas +1.
+           elif caractere.islower():
+              contar_minusculas += 1
+#.islower() conta caracteres minúsculas +1
+    print(f"Letras maiúsculas: {contar_maiusculas} ")
+#vai exibir a quantidade de letras maiúsculas.
+    print(f"Letras minúsculas: {contar_minusculas} ")
+#vai exibir a quantidade de letras minúsculas.
+frase = input("Oi, digite a frase que preferir usando letras maiúsculas e minúsculas: ")
+contar_maiusculas_minusculas(frase)
+#Dá a função de contar_maiusculas_minusculas para o parametrô frase, que o user digitar.
