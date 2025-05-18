@@ -1,0 +1,20 @@
+def soma_digitos(texto):
+#Esta função recebe um texto com letras e/ou números, logo em seguidas teremos a variável "soma".
+    soma = 0
+#a variável "soma" começa com 0 poís ela vai receber os valores.
+    for caractere in texto:
+#nessa parte o for vai analisar cada caractere digitado na string "texto"
+        if caractere.isdigit():
+#aqui vamos utilizar o .isdigit():, ele vai verificar se o caractere contém
+# dígitos e o transforma em inteiro e soma.
+           soma+= int(caractere)
+#aqui o int(caractere) vai tranformar o caractere númerico em um número de verdade
+    return soma
+#nessa parte retorna a variável soma
+print("Oi")
+frase_qualquer = input("digite o texto que quiser!:")
+#aqui o user digita alguma frase de sua preferência e caso contenha números inteiros ele
+# armazena para a próxima variável.
+resultado = soma_digitos(frase_qualquer)
+print(f"A soma dos dígitos é: {resultado}")
+#nessa parte aparece o resultado da soma para o user.
