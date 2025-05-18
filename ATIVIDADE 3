@@ -1,0 +1,25 @@
+import random
+#nessa parte vamos importa a biblioteca random que gera numero aleatórios.
+def jogo_da_aposta():
+#criando função
+     print("BET DO KOTAKI")
+     aposta = float(input("DIGITE O VALOR DA APOSTA(R$): "))
+#aqui perguntamos valor da aposta em reais por isso o "float", após isso o valor fica
+# armazenado na variável aposta.
+     tentativa = int(input("TENTE ACERTAR O NÚMERO DE (0 A 10): "))
+     numero_aleatorio = random.randint(0, 10)
+#nessa parte o user escolhe um número de (0 a 10) e a função random.
+# randint gera um número aleatorío entre 0 a 10.
+     if tentativa == numero_aleatorio:
+#verifica se você acertou, caso acerte recebe o dobro
+         premio = aposta * 2
+         print(f"VOCÊ ACERTOU! {numero_aleatorio} e ganhou R${premio:.2f}!")
+     elif  abs(tentativa - numero_aleatorio) == 1:
+#verifica se o erro foi por 1 núm, se for perto recebe *1.5 do valor.
+         premio = aposta * 1.5
+         print(f"QUASE! o número era {numero_aleatorio}. você ganhou R${premio:.2f}!")
+     else:
+#caso erre completamente.
+        print(f"VOCÊ ERROU! o numero era {numero_aleatorio}. você ganhou nada!" )
+jogo_da_aposta()
+# chama a função para rodar o jogo
